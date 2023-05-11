@@ -2,6 +2,57 @@
 
 ## Framework7 CLI Options
 
+#api/modules/test.api.js
+```
+import axios from "axios"
+const BASE_URL = 'http://localhost:8000/api';
+
+const api = () => {
+    return {
+        async getTest() {
+            return await axios.get(BASE_URL + "/test");
+        },
+    }
+}
+```
+#api/index.js
+```
+import test from "./modules/test.api"
+
+export default {
+    test
+}
+
+export default api;
+```
+
+#store/index.js
+```
+import { createStore } from "vuex"
+import api from '../api'
+const store = createStore({
+  state: {},
+  getters: {},
+  mutations: {},
+  actions: {
+    async getTest({ commit }) {
+      let res = await api.test().getTest();
+      return res;
+    }
+  }
+})
+
+export default store;
+```
+#helper
+```
+export default {
+  randomStr(str) {
+    return str;
+  }
+}
+```
+
 Framework7 app created with following options:
 
 ```
