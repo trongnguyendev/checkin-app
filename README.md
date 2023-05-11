@@ -53,6 +53,14 @@ export default {
 }
 ```
 
+#Responsive
+```
+Điện thoại di động (thường dưới 768px)
+Máy tính bảng (từ 768px đến 1024px)
+Màn hình máy tính và laptop (từ 1024px đến 1440px)
+Màn hình lớn (từ 1440px trở lên)
+```
+
 Framework7 app created with following options:
 
 ```
