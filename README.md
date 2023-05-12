@@ -23,7 +23,6 @@ export default {
     test
 }
 
-export default api;
 ```
 
 #store/index.js
